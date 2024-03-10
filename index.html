@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Wedding Celebration</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #fff;
+            transition: background 0.5s ease, color 0.5s ease;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: goldenrod; /* Golden color */
+            margin-bottom: 10px;
+        }
+
+        #start-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ffd700; /* Golden color */
+            color: #000;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none; /* Remove underline for anchor-like behavior */
+            transition: background-color 0.3s ease; /* Smooth transition for button color change */
+            border-radius: 20px;
+        }
+
+        #start-button:hover {
+            background-color: #ffc800; /* Lighter shade on hover */
+        }
+
+        #created-by {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            color: #000; /* Black color */
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        #created-by-loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #whatsapp-info {
+            color: #000; /* Black color */
+        }
+
+        #instagram-link {
+            color: #ffd700; /* Golden color for the link */
+            text-decoration: none;
+        }
+
+        #email-input {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        #email-input-loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Welcome to our Wedding Celebration</h1>
+    <img src="toppng.com-welcome-to-rajnagar-welcome-hand-506x877.png" alt="Welcome Image" style="max-width: 50%; max-height: 30%;">
+    
+    <!-- Use an anchor tag for the Start button to link to the main card page -->
+    <a href="maincard.html" id="start-button" onclick="redirectToMainCard()">Start</a>
+
+    <div id="created-by">
+        <p>Created by Prashant Singh<br>
+            (Prashu)
+        </p>
+        <p id="whatsapp-info">WhatsApp: <span style="color: #ffd700;">9302656838</span></p>
+        <p>Instagram: prashant2004_._._</p>
+    </div>
+
+    <!-- Include an input field for email -->
+    <input type="email" id="email-input" placeholder="Enter your email">
+
+    <script>
+        setTimeout(function() {
+            document.body.style.backgroundImage = "url('mandap.jpg')";
+            document.getElementById('created-by').id = 'created-by-loaded';
+            document.getElementById('email-input').id = 'email-input-loaded';
+        }, 500);
+
+        function redirectToMainCard() {
+            setTimeout(function() {
+                window.location.href = 'maincard.html';
+            }, 500);
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+

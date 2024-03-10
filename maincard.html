@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Wedding Invitation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;700&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url("./mandap1.jpg"); /* Replace with your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+        }
+
+        #header {
+            text-align: center;
+            padding: 50px;
+            color: #ff8400; /* Golden color */
+            animation: highlightTitle 1s ease-in-out infinite alternate; /* Animation properties */
+        }
+
+        @keyframes highlightTitle {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.1);
+            }
+        }
+
+        #details {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        }
+
+        #bride-pic,
+        #groom-pic,
+        #couple-pic {
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 300px;
+            border: 2px solid #000; /* Thin black border */
+            border-radius: 10px; /* Curved corners */
+            cursor: pointer;
+            transition: transform 0.3s ease; /* Smooth transition effect */
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Enlarge the image on hover */
+        }
+
+        #bride-details,
+        #groom-details {
+            display: inline-block;
+            width: 45%; /* Adjust the width as needed */
+            vertical-align: top;
+            color: #ffd700; /* Golden color for text */
+            text-align: left;
+            padding-right: 20px;
+        }
+
+        #groom-details {
+            text-align: right;
+            padding-left: 20px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        #rituals,
+        #venue,
+        #last-section,
+        #emoji-section {
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+
+        #details,
+        #venue,
+        #last-section,
+        .hindi-text {
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        }
+
+        #last-section {
+            background-image: url("./mandap1.jpg"); /* Add your mandap background image */
+            background-size: cover;
+            
+            background-repeat: no-repeat; /* Prevent background image from repeating */
+        }
+        #open{
+            color: gold;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #rituals p {
+            font-weight: bold;
+            color: #000;
+        }
+
+        #couple-pic img {
+            max-width: 400px; /* Increase the width of the couple picture */
+        }
+
+        .funny-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .funny-emoji {
+            max-width: 200px; /* Set your preferred maximum width */
+            height: auto;
+        }
+
+        .hindi-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            color: #ffd700; /* Golden color */
+            margin-left: 20px; /* Adjust the margin as needed */
+        }
+
+        /* Full-screen image modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal img {
+            max-width: 80%;
+            max-height: 80%;
+            border: 2px solid #fff; /* White border for the enlarged image */
+            border-radius: 10px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        #blessings-button {
+            padding: 20px 30px; /* Increase the padding for a bigger button */
+            font-size: 18px;
+            background-color: rgb(201, 0, 0);
+            color: white;
+            border: none;
+            height: 20px;
+            width: 90px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for button color change */
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        #blessings-button:hover {
+            background-color: #a70000; /* Darker shade on hover */
+        }
+        #pizza{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Wedding Invitation</h1>
+    </div>
+
+    <!-- Bride's Picture Section -->
+    <div id="bride-pic">
+        <img src="bride.jpg" alt="Bride's Picture" onclick="openModal('bride.jpg')">
+    </div>
+
+    <div id="details">
+        <div id="bride-details">
+            <h2 id="pizza">Bride's Details</h2>
+            <p><strong>Name:</strong> Mrs Kumari Shruti</p>
+            <p><strong>Father's Name:</strong> Mr. Gajendra Prasad Singh</p>
+            <p><strong>Mother's Name:</strong> Mrs Anju Devi</p>
+        </div>
+        
+        <!-- Groom's Picture Section -->
+        <div id="groom-pic">
+            <img src="groom.jpg" alt="Groom's Picture" onclick="openModal('groom.jpg')">
+        </div>
+        <div id="groom-details">
+            <h2 id="pizza">Groom's Details</h2>
+            <p><strong>Name:</strong> Kumar Govinda</p>
+            <p><strong>Father's Name:</strong> Late Gopal Krishna</p>
+            <p><strong>Mother's Name:</strong> Mrs. Geeta Devi</p>
+        </div>
+    </div>
+
+    <div id="rituals">
+        <h2 id="pizza">Rituals</h2>
+        <p>
+            <strong>Tilak ritual:</strong> 19-04-2024<br><br>
+            <strong>Haldi ritual:</strong> 20-04-2024<br><br>
+            <strong>Mehndi ritual:</strong> 21-04-2024<br><br>
+            <strong>Wedding date:</strong> 22-04-2024
+        </p>
+    </div>
+
+    <div id="venue">
+        <h2 id="pizza">Venue</h2>
+        <p id="open">
+            <strong id="open">Dream Villa, AIIMS Elevated Bridge, Pillor No. 310</strong><br>
+            Near Bailey Road Nahar, Patna
+        </p>
+    </div>
+
+    <!-- Combined Couple Picture Section -->
+    <div id="couple-pic">
+        <img src="combined.jpg" alt="Combined Couple Picture" onclick="openModal('combined.jpg')">
+    </div>
+
+    <div id="last-section">
+        <h2 id="pizza">Don't Forget!</h2>
+        <div class="funny-container">
+            <img class="funny-emoji" src="smile.png" alt="Funny Emoji">
+            <p class="hindi-text">
+                "जा सिमरन जा, जी ले अपनी ज़िंदगी"
+            </p>
+        </div>
+        
+        <!-- Link to the Blessings Page -->
+        <a href="blessings.html" id="blessings-button">Give Blessings</a>
+    </div>
+
+    <!-- Full-screen Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Enlarged Image">
+    </div>
+
+    <script>
+        function openModal(imagePath) {
+            document.getElementById('modalImage').src = imagePath;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Blessings</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-image: url("mandap.jpg"); /* Add your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Full viewport height */
+            text-align: center;
+            color: #333; /* Dark gray text color */
+        }
+
+        #blessings-container {
+            width: 80%;
+            max-width: 600px;
+            padding: 50px;
+            background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+            border-radius: 10px;
+        }
+
+        #comment-box {
+            width: 100%;
+            margin: 20px 0;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc; /* Light gray border */
+            border-radius: 8px;
+            resize: none; /* Disable textarea resizing */
+        }
+
+        #submit-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #ffd700; /* Golden color */
+            color: #000;
+            border: none;
+            cursor: pointer;
+        }
+
+        #confirmation-message {
+            display: none;
+            margin-top: 20px;
+            color: #4CAF50; /* Green text color for confirmation */
+        }
+    </style>
+</head>
+<body>
+
+    <div id="blessings-container">
+        <h1>Give Your Blessings</h1>
+        <p>Share your wishes and blessings for the newlyweds!</p>
+
+        <form id="blessings-form" onsubmit="submitBlessings(event)">
+            <textarea id="comment-box" placeholder="Write your blessings here..." required></textarea>
+            <br>
+            <button type="submit" id="submit-button">Submit Blessings</button>
+        </form>
+
+        <div id="confirmation-message">Blessings recorded! Thank you.</div>
+    </div>
+
+    <script>
+        function submitBlessings(event) {
+            event.preventDefault();
+            // You can add code here to store the comments if needed.
+            document.getElementById('blessings-form').reset(); // Reset the form
+            document.getElementById('confirmation-message').style.display = 'block'; // Display confirmation message
+
+            // Redirect to the welcome page after a delay (e.g., 3 seconds)
+            setTimeout(function() {
+                window.location.href = "index.html"; // Replace with the actual path or URL of your welcome page
+            }, 3000);
+        }
+    </script>
+
+</body>
+</html>
+
+
